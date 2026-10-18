@@ -87,7 +87,7 @@ class ShadowInterval(gl.Contract):
     def draft_interval(
         self,
         interval_id: str,
-        reviewer: Address,
+        reviewer: str,
         title: str,
         installation_json: str,
         protected_use_json: str,
@@ -100,7 +100,11 @@ class ShadowInterval(gl.Contract):
         timing = parse_object(timing_json, "timing")
         start = minute(timing.get("start"), "start")
         end = minute(timing.get("end"), "end")
-        if reviewer == gl.message.sender_address:
+        try:
+            reviewer_address = Address(reviewer)
+        except Exception:
+            raise gl.vm.UserError("[EXPECTED] valid reviewer address required")
+        if reviewer_address == gl.message.sender_address:
             raise gl.vm.UserError("[EXPECTED] reviewer must differ from owner")
         if len(clean_title) < 8 or end - start < 60:
             raise gl.vm.UserError("[EXPECTED] meaningful title and window of at least 60 minutes required")
@@ -130,7 +134,7 @@ class ShadowInterval(gl.Contract):
         self.used_inputs[digest] = True
         self.records[key] = ShadowRecord(
             gl.message.sender_address,
-            reviewer,
+            reviewer_address,
             clean_title,
             json.dumps(installation, sort_keys=True),
             json.dumps(protected_use, sort_keys=True),

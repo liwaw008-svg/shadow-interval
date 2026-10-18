@@ -2,6 +2,20 @@ from pathlib import Path
 import json, re, time
 from genlayer_py import create_account, create_client
 from genlayer_py.chains import studionet
+import genlayer_py.contracts.actions as contract_actions
+
+# StudioNet currently expects the legacy explicit `method` calldata key.
+def compatible_calldata(method=None, args=None, kwargs=None):
+    payload = {}
+    if method is not None:
+        payload["method"] = method
+    if args:
+        payload["args"] = args
+    if kwargs:
+        payload["kwargs"] = kwargs
+    return payload
+
+contract_actions.make_calldata_object = compatible_calldata
 
 ROOT = Path(__file__).parents[1]
 ENV = (ROOT.parents[3] / "accounts.env").read_text(encoding="utf-8")
