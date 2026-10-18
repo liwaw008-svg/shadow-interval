@@ -1,0 +1,12 @@
+{
+  "account": "liwaw008-svg",
+  "network": "StudioNet",
+  "contractAddress": "0xbD2E7736246c2c45b5640B546424681F715Df4df",
+  "deploymentTransaction": "0x13140fe7fa36a8d65869e28ff6a0e7ce2f4ebe91fa64a4a4e972d0975e71d2d5",
+  "deploymentConsensus": "MAJORITY_AGREE",
+  "deploymentExecution": "SUCCESS",
+  "sourceSha256": "a76bbf9a9d741dca2c24125a1b6b03aac39d882704c54c0f4754bc2f3396b6a8",
+  "sourceCommit": "1d767ac379120a76aea531c830a9baab23e5f531",
+  "repository": "https://github.com/liwaw008-svg/shadow-interval",
+  "publicSite": "https://shadow-interval.pages.dev/"
+}

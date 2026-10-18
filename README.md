@@ -24,4 +24,10 @@ python -m pytest -q
 genvm-lint lint contracts/contract.py
 ```
 
-The deployment address, exact source digest, finalized transactions, and canonical readback are recorded after StudioNet release.
+## StudioNet release
+
+- App: [shadow-interval.pages.dev](https://shadow-interval.pages.dev/)
+- Contract: [`0xbD2E7736246c2c45b5640B546424681F715Df4df`](https://explorer-studio.genlayer.com/address/0xbD2E7736246c2c45b5640B546424681F715Df4df)
+- Deployment: [`0x13140fe7fa36a8d65869e28ff6a0e7ce2f4ebe91fa64a4a4e972d0975e71d2d5`](https://explorer-studio.genlayer.com/transactions/0x13140fe7fa36a8d65869e28ff6a0e7ce2f4ebe91fa64a4a4e972d0975e71d2d5)
+
+The exact source digest and canonical lifecycle readback are recorded in `deployment.json` and `evidence/live-run.json`.

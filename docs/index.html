@@ -44,7 +44,7 @@
 </aside>
 <script type="module">
 import{createAccount,createClient}from'https://esm.sh/genlayer-js@1.1.8';import{studionet}from'https://esm.sh/genlayer-js@1.1.8/chains';
-const ADDRESS='0x0000000000000000000000000000000000000000',ENDPOINT='https://studio.genlayer.com/api',REPO='https://github.com/liwaw008-svg/shadow-interval';
+const ADDRESS='0xbD2E7736246c2c45b5640B546424681F715Df4df',ENDPOINT='https://studio.genlayer.com/api',REPO='https://github.com/liwaw008-svg/shadow-interval';
 const reader=createClient({chain:studionet,endpoint:ENDPOINT,account:createAccount()});let wallet=null;
 const $=s=>document.querySelector(s);const status=(message,bad=false)=>{$('#status').textContent=message;$('#status').style.borderColor=bad?'var(--coral)':'var(--violet)'};
 $('#recordId').value='SUN-'+Date.now().toString().slice(-9);$('#repo').href=REPO;$('#explorer').href='https://explorer-studio.genlayer.com/address/'+ADDRESS;

@@ -56,5 +56,6 @@ if record.get("verdict") != "CONFLICT":
     finalized(owner_client, "adopt", "adopt_interval", [record_id])
     record = owner_client.read_contract(address=address, function_name="get_interval", args=[record_id])
 output = {"recordType": "synthetic planning rehearsal; not a legal daylight determination", "recordId": record_id, "contractAddress": address, "transactions": transactions, "readback": record}
+(ROOT / "evidence").mkdir(exist_ok=True)
 (ROOT / "evidence" / "live-run.json").write_text(json.dumps(output, indent=2, default=str) + "\n", encoding="utf-8")
 print(json.dumps(output, indent=2, default=str), flush=True)

@@ -1,0 +1,45 @@
+{
+  "recordType": "synthetic planning rehearsal; not a legal daylight determination",
+  "recordId": "SUN-1792363769",
+  "contractAddress": "0xbD2E7736246c2c45b5640B546424681F715Df4df",
+  "transactions": {
+    "draft": "0x65cb660717761ccacf63df790153621c9ff9854747fd1b68e915ff556e87aa5c",
+    "screen": "0xdc45930e0fb613b365afd84da66f8c74cae34728e8ee82f619216ebf2097f67c",
+    "adopt": "0x18b0dad9be7f0067f622900af4169910525a8e9bbf0c4e9cd41abe62e4f7976d"
+  },
+  "readback": {
+    "causes": [],
+    "id": "SUN-1792363769",
+    "input_digest": "d74fbef7b0a954f62c370cdf0fc4c7734efe21ebe5c83a96e684999d0a1b5f91",
+    "installation": {
+      "height_m": "2.4",
+      "kind": "temporary fabric canopy",
+      "orientation": "south-east edge",
+      "purpose": "afternoon reading table"
+    },
+    "mitigations": [],
+    "owner": "0x05C0cc3F433F6e296f18117f558FdB9043434793",
+    "protected_use": {
+      "protected_end": 720,
+      "protected_start": 540,
+      "sensitivity": "retain direct morning light",
+      "use": "seedling propagation benches"
+    },
+    "rationale": "Requested installation window (1:00 PM - 6:00 PM) does not overlap with protected use period (9:00 AM - 12:00 PM) and installation orientation (south-east edge) does not impact morning light retention for seedling propagation",
+    "reviewer": "0x412d61db014fCdDda12e33b826f63B8ef9AC2E87",
+    "safe_end": 1080,
+    "safe_start": 780,
+    "source_refs": [
+      0,
+      1,
+      2
+    ],
+    "state": "ADOPTED",
+    "timing": {
+      "end": 1080,
+      "start": 780
+    },
+    "title": "Reading canopy beside propagation tables",
+    "verdict": "OPEN"
+  }
+}
