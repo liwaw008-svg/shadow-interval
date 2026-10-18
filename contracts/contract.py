@@ -74,6 +74,9 @@ class ShadowInterval(gl.Contract):
     records: TreeMap[str, ShadowRecord]
     used_inputs: TreeMap[str, bool]
 
+    def __init__(self):
+        pass
+
     def _get(self, interval_id):
         key = identifier(interval_id)
         if key not in self.records:
